@@ -1,0 +1,33 @@
+{% extends 'clientes/base.html'%}
+{% block conteudo %}
+<div class='container'>
+    <h1>Listagem de clientes:</h1>
+    <table class="table table-bordered table-striped">
+        <tr>
+            <th>id </th>  
+            <th>nome </th>
+            <th>endereço </th>
+            <th>aparelho </th>
+            <th>problema </th>
+            <th>valor peças </th>
+            <th>mão de obra </th>
+            <th>total do serviço </th>
+            <th>pediu nota </th>
+        </tr>
+        {% for cliente in clientes %}
+        <tr>
+            <td>{{cliente.id_cliente}}</td>
+            <td>{{cliente.nome}}</td>
+            <td>{{cliente.endereco}}</td>
+            <td>{{cliente.aparelho}}</td>
+            <td>{{cliente.problema}}</td>
+            <td>{{cliente.valor_pecas}}</td>
+            <td>{{cliente.mao_de_obra}}</td>
+            <td>{{cliente.total_servico}}</td>
+            <td>{{cliente.pediu_nota}}</td>
+        </tr>
+        {% endfor %}
+    </table>
+</div>
+
+{% endblock %}

@@ -1,0 +1,18 @@
+{% extends 'clientes/base.html' %}
+{% block conteudo %}
+<form action="{% url 'listagem_clientes' %}" method="post">
+   {% csrf_token %}
+    <div style='text-align:center;' class='container'>
+      <h1>Cadastro de clientes</h1>
+      Nome <input name="nome" class='form-control-sm' type='text'><br>
+      Endereço <input name="endereco" class='form-control-sm' type='text'><br>
+      Aparelho <input name="aparelho" class='form-control-sm' type='text'><br>
+      Problema <input name="problema" class='form-control-sm' type='text'><br>
+      Valor peças <input name="valor_pecas" class='form-control-sm' type='text'><br>
+      Valor mão de obra <input name="mao_de_obra" class='form-control-sm' type='text'><br>
+      Valor total do serviço <input name="total_servico" class='form-control-sm' type='text'><br>
+      pediu nota <input name="pediu_nota" class='form-control-sm' type='text'><br>
+      <button class="form-control-sm">Enviar</button>
+    </div> 
+</form>
+{% endblock %}
